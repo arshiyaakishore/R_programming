@@ -1,0 +1,5 @@
+vector3 <- c(9,1,0)
+vector4 <- c(6,0,11,3,14,1,2,6,9)
+array2 <- array(c(vector3,vector4),dim = 
+c(3,3,2))
+print(array2)
