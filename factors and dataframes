@@ -1,5 +1,28 @@
 vector3 <- c(9,1,0)
 vector4 <- c(6,0,11,3,14,1,2,6,9)
-array2 <- array(c(vector3,vector4),dim = 
-c(3,3,2))
+array2 <- array(c(vector3,vector4),dim = c(3,3,2))
 print(array2)
+
+x <- factor(c("single","married","married","single")) 
+str(x)
+
+x[3] <- "widowed" # cannot assign values outside levels
+levels(x) <- c(levels(x), "widowed") # add new level 
+x[3] <- "widowed"
+x
+g<-relevel(x, "widowed") # moves widowed to be the first level
+levels(g)
+
+
+fm <- factor(LETTERS[1:6], levels = LETTERS[1:4],labels = letters[1:4])
+fm
+
+
+set.seed(20)
+ii <- sample(1:4, 20, replace=T)
+ii
+
+fii <- factor(ii, levels=1:4) # it is necessary to indicate the numeric levels
+fii
+levels(fii) <- c("empty", "low", "normal", "full")
+fii
